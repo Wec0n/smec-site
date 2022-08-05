@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -96,6 +102,34 @@ header nav ul li a:hover {
     color: #203764;
 }
 
+/* CONFIGURAÇÃO DOS SUBMENUS ////////////////////////////////////////////////////////////////////*/
+
+header nav ul li ul {
+    flex-direction: column;
+    display: none;
+    border-bottom: 2px solid #203764;
+}
+
+header nav ul li ul li {
+    flex-basis: 0;
+}
+
+header nav ul li ul li a {
+    background-color: #eaeaea;
+    color: #203764;
+}
+
+header nav ul li ul li a:hover {
+    background-color: #203764;
+    color: #eaeaea;
+}
+
+header nav ul li:hover ul {
+    display: block;
+}
+
+/* CONFIGURAÇÃO DOS SUBMENUS ////////////////////////////////////////////////////////////////////*/
+
 
 /* MAIN */
 
@@ -145,7 +179,7 @@ main section a h2 {
 
 main section a img {
     width: inherit;
-    max-width: 350px;
+    max-width: 100%;
     max-height: 200px;
 }
 
