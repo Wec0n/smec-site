@@ -1,15 +1,17 @@
 * {
+    --azul: #203764;
+    --amarelo: #f6a411;
+    --branco: #eaeaea;
+    --preto: #2b2b2b;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 400;
 }
 
 body {
     margin: 0;
     padding: 0;
-    background-color: #eaeaea;
+    background-color: var(--branco);
 }
 
 /* HEADER */
@@ -25,7 +27,7 @@ header {
 
 header div {/* ELEMENTO TEMPORÁRIO! TESTE */
     width: 100%;
-    background-color: #f6a411;
+    background-color: var(--amarelo);
     display: flex;
     align-items: center;
 }
@@ -39,7 +41,7 @@ header div p { /* ELEMENTO TEMPORÁRIO! TESTE */
     margin: 0;
     padding: 0;
     flex-grow: 1;
-    color: #eaeaea;
+    color: var(--branco);
     font-size: 1.2rem;
 }
 
@@ -55,7 +57,7 @@ header h1 {
     margin: 10px;
     padding: 0;
     text-transform: uppercase;
-    color: #203764;
+    color: var(--azul);
     font-size: 2.1rem;
     text-align: center;
 }
@@ -89,19 +91,18 @@ header nav ul li a {
     justify-content: center;
     margin: 0;
     padding: 0px;
-    background-color: #203764;
-    color: #eaeaea;
+    background-color: var(--azul);
+    color: var(--branco);
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    box-sizing: border-box;
     align-content: center;
     height: 30px;
 }
 
 header nav ul li a:hover {
-    background-color: #eaeaea;
-    color: #203764;
+    background-color: var(--branco);
+    color: var(--azul);
 }
 
 /* CONFIGURAÇÃO DOS SUBMENUS ////////////////////////////////////////////////////////////////////*/
@@ -109,7 +110,7 @@ header nav ul li a:hover {
 header nav ul li ul {
     flex-direction: column;
     display: none;
-    border-bottom: 2px solid #203764;
+    border-bottom: 2px solid var(--azul);
 }
 
 header nav ul li ul li {
@@ -117,13 +118,13 @@ header nav ul li ul li {
 }
 
 header nav ul li ul li a {
-    background-color: #eaeaea;
-    color: #203764;
+    background-color: var(--branco);
+    color: var(--azul);
 }
 
 header nav ul li ul li a:hover {
-    background-color: #203764;
-    color: #eaeaea;
+    background-color: var(--azul);
+    color: var(--branco);
 }
 
 header nav ul li:hover ul {
@@ -153,7 +154,7 @@ main section a {
     padding: 0;
     width: 300px;
     /* height: 375px; RETIRADO. SE TÍTULO É GRANDE -> TEXTO ULTRAPASSAVA*/ 
-    border: 3px solid #f6a411;
+    border: 3px solid var(--amarelo);
     border-radius: 2.5px;
     transition: 0.1s;
     display: block;
@@ -162,20 +163,20 @@ main section a {
 }
 
 main section a:hover {
-    border-color: #203764;
+    border-color: var(--azul);
 }
 
 main section a:hover h2 {
-    background-color: #203764;
-    color: #eaeaea;
+    background-color: var(--azul);
+    color: var(--branco);
 }
 
 main section a h2 {
     margin: 0;
     padding: 3px;
     text-align: center;
-    background-color: #eaeaea;
-    color: #f6a411;
+    background-color: var(--branco);
+    color: var(--amarelo);
     font-size: 1.3rem;
 }
 
@@ -186,7 +187,7 @@ main section a img {
 }
 
 main section a p {
-    color: #2b2b2b;
+    color: var(--preto);
     margin: 5px;
     text-align: justify;
 }
@@ -196,7 +197,7 @@ main section a p {
 footer {
     margin: 0;
     padding: 10px;
-    background-color: #f6a411;
+    background-color: var(--amarelo);
 }
 
 footer p {
@@ -206,7 +207,7 @@ footer p {
 }
 
 footer p span {
-    color: #2b2b2b;
+    color: var(--preto);
     font-weight: bold;
     font-style: italic;
 }
@@ -231,43 +232,6 @@ footer p span {
         height: inherit;
         flex-basis: 0;
     }
-}
-
-/* FONTES */
-@font-face {
-    font-family: 'Oswald';
-    font-weight: 200;
-    src: url('assets/fonts/Oswald-ExtraLight.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Oswald';
-    font-weight: 300;
-    src: url('assets/fonts/Oswald-Light.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Oswald';
-    font-weight: 400;
-    src: url('assets/fonts/Oswald-Regular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Oswald';
-    font-weight: 500;
-    src: url('assets/fonts/Oswald-Medium.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Oswald';
-    font-weight: 600;
-    src: url('assets/fonts/Oswald-SemiBold.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Oswald';
-    font-weight: 700;
-    src: url('assets/fonts/Oswald-Bold.ttf') format('truetype');
 }
 
 /*

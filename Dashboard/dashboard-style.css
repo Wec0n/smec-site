@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+    --azul: #203764;
+    --amarelo: #f6a411;
+    --branco: #eaeaea;
+    --preto: #2b2b2b;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eaeaea;
+    display: grid;
+}
+
+header {
+    height: 50px;
+
+    background-color: var(--amarelo);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        'menu-principal div'
+    ;
+}
+
+.menu-principal {
+    grid-area: 'menu-principal';
+    height: calc(100vh - 50px - 50px); /* 50px do header e 50px do footer */
+    overflow: auto;
+    border-right: 1px solid var(--azul);
+}
+
+.menu-principal-lista{
+    height: 100%;
+}
+
+.lista-item {
+
+}
+
+.item-link {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    background-color: var(--branco);
+    color: var(--preto);
+    text-transform: uppercase;
+    text-decoration: none;
+    text-indent: 10px;
+    transition: 0.1s;
+}
+
+.item-link:hover {
+    background-color: var(--azul);
+    color: var(--branco);
+    text-indent: 20px;
+}
+
+.item-submenu {
+    /* max-height: 250px; */
+    max-height: 0px;
+    overflow: auto;
+    transition: 0.2s;
+}
+
+.submenu-subitem {
+}
+
+.subitem-link {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    background-color: var(--branco);
+    color: var(--preto);
+    text-transform: uppercase;
+    text-decoration: none;
+    text-indent: 10px;
+    transition: 0.1s;
+}
+
+.subitem-link:hover {
+    background-color: var(--azul);
+    color: var(--branco);
+    text-indent: 20px;
+}
+
+main div {
+    grid-area: 'div';
+
+    background-color: var(--branco);
+}
+
+footer {
+    height: 50px;
+    
+    background-color: var(--azul);
+}
+
+/* BARRA DE ROLAGEM */
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--branco);
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--azul);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--preto);
+}
