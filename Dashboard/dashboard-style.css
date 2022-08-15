@@ -79,8 +79,8 @@ main {
     display: flex;
     height: 50px;
     align-items: center;
-    background-color: var(--branco);
-    color: var(--preto);
+    background-color: var(--azul);
+    color: var(--branco);
     text-transform: uppercase;
     text-decoration: none;
     text-indent: 10px;
@@ -88,7 +88,7 @@ main {
 }
 
 .subitem-link:hover {
-    background-color: var(--azul);
+    background-color: var(--preto);
     color: var(--branco);
     text-indent: 20px;
 }

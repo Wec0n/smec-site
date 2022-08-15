@@ -9,8 +9,10 @@ sub.forEach((item, index) => {
         }
 
         sub.forEach((outro) => {
-            if (item != outro) {
-                outro.querySelector('.item-submenu').style.maxHeight = '0px';
+            if (outro.querySelector('.item-submenu') != null || outro.querySelector('.item-submenu') != undefined) {
+                if (item != outro) {
+                    outro.querySelector('.item-submenu').style.maxHeight = '0px';
+                }
             }
         })
     })
