@@ -102,10 +102,50 @@ main {
     text-indent: 20px;
 }
 
-main div {
+.tela-trabalho {
     grid-area: 'div';
+    padding: 0px 5px;
 
     background-color: var(--branco);
+}
+
+.tela-trabalho-titulo {
+    text-align: center;
+    color: var(--preto);
+}
+
+.tela-trabalho-formulario {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.formulario-item {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    margin-bottom: 10px;
+}
+
+.item-label {
+    flex-basis: 100%;
+    color: var(--preto);
+    font-size: 1.2rem;   
+}
+
+.item-input {
+    border: 1px solid var(--preto);
+    padding: 5px;
+    flex-grow: 1;
+    border: 1px solid var(--preto);
+    color: var(--preto);
+    background-color: var(--branco);
+    border-radius: 2px;
+}
+
+.item-input:focus {
+    outline: 1px solid var(--azul);
 }
 
 footer {
@@ -145,4 +185,10 @@ footer {
 
 .item-submenu::-webkit-scrollbar-thumb:hover {
     background: var(--amarelo);
+}
+
+/* TESTE */
+
+.teste {
+    opacity: 50%;
 }
