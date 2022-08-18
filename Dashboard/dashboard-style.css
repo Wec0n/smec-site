@@ -105,7 +105,6 @@ main {
 .tela-trabalho {
     grid-area: 'div';
     padding: 0px 5px;
-
     background-color: var(--branco);
 }
 
@@ -148,6 +147,25 @@ main {
     outline: 1px solid var(--azul);
 }
 
+.formulario-botao {
+    width: 20%;
+    height: 50px;
+    border-radius: 2px;
+    border: 2px solid var(--preto);
+    background-color: var(--branco);
+    color: var(--preto);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.formulario-botao:hover {
+    background-color: var(--azul);
+    color: var(--branco);
+    cursor: pointer;
+    border-color: var(--azul);
+}
+
 footer {
     height: 50px;
     
@@ -187,8 +205,11 @@ footer {
     background: var(--amarelo);
 }
 
-/* TESTE */
 
-.teste {
+/* CLASSES PARA JAVASCRIPT */
+.menu-opacidade {
     opacity: 50%;
 }
+
+/* TESTE */
+
