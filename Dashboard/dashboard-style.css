@@ -106,6 +106,8 @@ main {
     grid-area: 'div';
     padding: 0px 5px;
     background-color: var(--branco);
+    height: calc(100vh - 125px);
+    overflow: auto;
 }
 
 .tela-trabalho-titulo {
@@ -116,15 +118,23 @@ main {
 .tela-trabalho-formulario {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .formulario-item {
-    flex-grow: 1;
     display: flex;
     flex-wrap: wrap;
+    flex-basis: 100%;
+    flex-grow: 1;
+    margin: 5px;
+}
+
+.formulario-item-metade {
     flex-basis: 50%;
-    margin-bottom: 10px;
+}
+
+.formulario-item-um-quarto {
+    flex-basis: 25%;
 }
 
 .item-label {
@@ -149,14 +159,14 @@ main {
 
 .formulario-botao {
     width: 20%;
-    height: 50px;
+    height: 40px;
     border-radius: 2px;
     border: 2px solid var(--preto);
     background-color: var(--branco);
     color: var(--preto);
     font-size: 1.2rem;
     text-transform: uppercase;
-    margin-top: 10px;
+    display: block;
 }
 
 .formulario-botao:hover {
@@ -213,3 +223,8 @@ footer {
 
 /* TESTE */
 
+p {
+    display: block;
+    border: 1px solid red;
+    width: 100%;
+}
