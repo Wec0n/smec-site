@@ -35,4 +35,16 @@ window.onload = () => { // O CÓDIGO SÓ VAI EXECUTAR QUANDO TODA A PÁGINA FOR 
             })
         })
     })
+
+    const btn = document.querySelector('#teste');
+    btn.addEventListener('click', () => {
+        const teste = fetch('tela-trabalho.html');
+        teste.then(r => r.text()).then(body => {
+            const conteudo = document.querySelector('.tela-trabalho');
+            conteudo.innerHTML = body;
+        })
+    })
+
+
+    console.log(teste);
 }
