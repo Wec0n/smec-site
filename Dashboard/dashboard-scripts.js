@@ -36,15 +36,17 @@ window.onload = () => { // O CÓDIGO SÓ VAI EXECUTAR QUANDO TODA A PÁGINA FOR 
         })
     })
 
-    const btn = document.querySelector('#teste');
+    let btn = null;
+    document.querySelectorAll('a').forEach((itemDoMenu) => {
+        if (itemDoMenu.innerHTML == 'Cadastro') {
+            btn = itemDoMenu;
+        }
+    });
     btn.addEventListener('click', () => {
-        const teste = fetch('tela-trabalho.html');
-        teste.then(r => r.text()).then(body => {
+        const caminhoTelaTrabalho = fetch('tela-trabalho.html');
+        caminhoTelaTrabalho.then(r => r.text()).then(body => {
             const conteudo = document.querySelector('.tela-trabalho');
             conteudo.innerHTML = body;
         })
     })
-
-
-    console.log(teste);
 }
