@@ -38,35 +38,53 @@ window.onload = () => { // O CÓDIGO SÓ VAI EXECUTAR QUANDO TODA A PÁGINA FOR 
         });
     })();
 
+    // FUNÇÃO QUE FAZ A REQUISIÇÃO ASSÍNCRONA DO ARQUIVO (SÓ FUNCIONA, POR ENQUANTO, PARA O USUÁRIO).
+    // FALTA IMPLEMENTAR PARA OS OUTROS SETORES (PEGAR A PARTE ANTERIOR COM O NOME DO MENU PAI).
     (() => {
-        let btn = null;
-        document.querySelectorAll('a').forEach((itemDoMenu) => {
-            if (itemDoMenu.innerHTML == 'Cadastro') {
-                btn = itemDoMenu;
-            }
-        });
-        btn.addEventListener('click', () => {
-            const caminhoTelaTrabalho = fetch('tela-trabalho-cadastro-de-usuario.html');
-            caminhoTelaTrabalho.then(r => r.text()).then(body => {
-                const conteudo = document.querySelector('.tela-trabalho');
-                conteudo.innerHTML = body;
-            });
-        });
+        const clicado = document.querySelectorAll(".subitem-link").forEach((elemento) => {
+            elemento.addEventListener('click', () => {
+                const final = elemento.innerHTML.toLowerCase();
+                const arquivoNome = 'tela-trabalho-usuario-' + final + '.html';
+                const caminhoTelaTrabalho = fetch(arquivoNome);
+                caminhoTelaTrabalho.then(r => r.text()).then(body => {
+                    const conteudo = document.querySelector('.tela-trabalho');
+                    conteudo.innerHTML = body;
+                });
+            })
+        })
     })();
 
-    (() => {
-        let btn = null;
-        document.querySelectorAll('a').forEach((itemDoMenu) => {
-            if (itemDoMenu.innerHTML == 'Listar') {
-                btn = itemDoMenu;
-            }
-        });
-        btn.addEventListener('click', () => {
-            const caminhoTelaTrabalho = fetch('tela-trabalho-listar-usuarios.html');
-            caminhoTelaTrabalho.then(r => r.text()).then(body => {
-                const conteudo = document.querySelector('.tela-trabalho');
-                conteudo.innerHTML = body;
-            });
-        });
-    })();
+    // (() => {
+    //     let btn = null;
+    //     document.querySelectorAll('a').forEach((itemDoMenu) => {
+    //         if (itemDoMenu.innerHTML == 'Cadastro') {
+    //             btn = itemDoMenu;
+    //         }
+    //     });
+    //     btn.addEventListener('click', () => {
+    //         const caminhoTelaTrabalho = fetch('tela-trabalho-usuario-cadastro.html');
+    //         caminhoTelaTrabalho.then(r => r.text()).then(body => {
+    //             const conteudo = document.querySelector('.tela-trabalho');
+    //             conteudo.innerHTML = body;
+    //         });
+    //     });
+    // })();
+
+    // (() => {
+    //     let btn = null;
+    //     document.querySelectorAll('a').forEach((itemDoMenu) => {
+    //         if (itemDoMenu.innerHTML == 'Listar') {
+    //             btn = itemDoMenu;
+    //         }
+    //     });
+    //     btn.addEventListener('click', () => {
+    //         const caminhoTelaTrabalho = fetch('tela-trabalho-usuario-cadastro.html');
+    //         caminhoTelaTrabalho.then(r => r.text()).then(body => {
+    //             const conteudo = document.querySelector('.tela-trabalho');
+    //             conteudo.innerHTML = body;
+    //         });
+    //     });
+    // })();
+
+    //REALIZAÇÃO DE TESTES
 }
