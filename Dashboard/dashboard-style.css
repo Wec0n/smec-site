@@ -8,6 +8,8 @@
     --amarelo: #f6a411;
     --branco: #eaeaea;
     --preto: #2b2b2b;
+    --vermelho: #eb4034;
+    --verde: #18a365;
 }
 
 body {
@@ -147,7 +149,6 @@ main {
     border: 1px solid var(--preto);
     padding: 5px;
     flex-grow: 1;
-    border: 1px solid var(--preto);
     color: var(--preto);
     background-color: var(--branco);
     border-radius: 2px;
@@ -227,4 +228,102 @@ p {
     display: block;
     border: 1px solid red;
     width: 100%;
+}
+
+table {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    height: calc(100% - 50px);
+    overflow: auto;
+    border: 2px solid var(--azul);
+    border-radius: 2px;
+    padding: 10px;
+}
+
+tr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2px;
+    height: 50px;
+}
+
+tr:not(:first-child):hover  td:not(:last-child, :nth-last-child(-n+2)) {
+    background-color: #b0b0b0;
+    cursor: pointer;
+}
+
+th, td {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 200px;
+    flex-grow: 1;
+    font-family: 'Courier New', Courier, monospace;
+    height: 100%;
+    padding: 2px;
+
+    /* border: 1px solid red; */
+}
+
+th {
+    background-color: var(--amarelo);
+    color: var(--branco);
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.cabecalho-btn-editar-usuario, .cabecalho-btn-deletar-usuario {
+    flex-basis: 75px;
+    flex-grow: 1;
+    padding: 5px;
+
+}
+
+td {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.btn-editar-usuario, .btn-deletar-usuario {
+    padding: 0;
+    margin: 0;
+    flex-basis: 75px;
+    flex-grow: 1;
+}
+
+.btn-editar-usuario a, .btn-deletar-usuario a {
+    text-decoration: none;
+    color: var(--preto);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-editar-usuario a:hover, .btn-deletar-usuario a:hover {
+    text-transform: uppercase;
+}
+
+.btn-editar-usuario a {
+    /* border: 2px solid var(--verde); */
+}
+
+.btn-editar-usuario a:hover {
+    background-color: var(--verde);
+    color: var(--branco);
+}
+
+.btn-deletar-usuario a {
+    /* border: 2px solid var(--vermelho); */
+}
+
+.btn-deletar-usuario a:hover {
+    background-color: var(--vermelho);
+    color: var(--branco);
 }
