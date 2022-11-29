@@ -320,7 +320,6 @@ td {
 
 .btn-editar-usuario a:hover {
     background-color: var(--verde);
-    background-color: (var(--azul));
     color: var(--branco);
 }
 
