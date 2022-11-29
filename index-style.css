@@ -153,17 +153,18 @@ main section {
 main section a {
     padding: 0;
     width: 300px;
+    height: 400px;
     /* height: 375px; RETIRADO. SE TÍTULO É GRANDE -> TEXTO ULTRAPASSAVA*/ 
     border: 3px solid var(--amarelo);
     border-radius: 2.5px;
     transition: 0.1s;
     display: block;
     text-decoration: none;
-
 }
 
 main section a:hover {
     border-color: var(--azul);
+    /* opacity: 0.5; */
 }
 
 main section a:hover h2 {
@@ -262,3 +263,4 @@ footer p span {
 */
 
 /* TESTES */
+
