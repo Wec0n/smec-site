@@ -4,12 +4,16 @@
     box-sizing: border-box;
 
 
-    --azul: #203764;
-    --amarelo: #f6a411;
+    /* --azul: #203764;
+    --amarelo: #f6a411; */
+    --azul: #4d69a1;
+    --amarelo: #ffe135;
     --branco: #eaeaea;
     --preto: #2b2b2b;
     --vermelho: #eb4034;
     --verde: #18a365;
+    --azulAlternativo: #4d69a1;
+    --amareloAlternativo: #dfd880;
 }
 
 body {
@@ -226,7 +230,7 @@ footer {
 
 p {
     display: block;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
 }
 
@@ -316,6 +320,7 @@ td {
 
 .btn-editar-usuario a:hover {
     background-color: var(--verde);
+    background-color: (var(--azul));
     color: var(--branco);
 }
 
@@ -326,4 +331,10 @@ td {
 .btn-deletar-usuario a:hover {
     background-color: var(--vermelho);
     color: var(--branco);
+}
+
+.subitem-link-ativo {
+    background-color: var(--preto);
+    color: var(--branco);
+    text-indent: 20px;
 }

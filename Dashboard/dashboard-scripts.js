@@ -14,12 +14,14 @@ window.onload = () => { // O CÓDIGO SÓ VAI EXECUTAR QUANDO TODA A PÁGINA FOR 
                     } else {
                         item.querySelector('.item-submenu').style.maxHeight = '0px';
                         // VERIFICAÇÃO PARA FICAR ABERTO O SUBMENU DO ITEM SELECIONADO
-                        // FALTA AINDA COLOCAR O ESTILO DE HOVER QUANDO SELECIONADO
                         item.querySelectorAll('.item-submenu').forEach((submenuDoItem) => {
                             submenuDoItem.querySelectorAll('.submenu-subitem').forEach((subitemDoSubmenu) => {
                                 let linkDoSubmenu = subitemDoSubmenu.querySelector('.subitem-link');
                                 if (linkDoSubmenu == event.target) {
                                     item.querySelector('.item-submenu').style.maxHeight = '250px';
+                                    linkDoSubmenu.classList.add('subitem-link-ativo');
+                                } else {
+                                    linkDoSubmenu.classList.remove('subitem-link-ativo');
                                 }
                             })
                         })
@@ -49,13 +51,21 @@ window.onload = () => { // O CÓDIGO SÓ VAI EXECUTAR QUANDO TODA A PÁGINA FOR 
         });
     })();
 
-    // FUNÇÃO QUE FAZ A REQUISIÇÃO ASSÍNCRONA DO ARQUIVO (SÓ FUNCIONA, POR ENQUANTO, PARA O USUÁRIO).
-    // FALTA IMPLEMENTAR PARA OS OUTROS SETORES (PEGAR A PARTE ANTERIOR COM O NOME DO MENU PAI).
+    // FUNÇÃO QUE FAZ A REQUISIÇÃO ASSÍNCRONA DO ARQUIVO.
     (() => {
+        let meio = null;
+        document.querySelectorAll('.item-link').forEach((itemLink) => {
+            itemLink.addEventListener('click', (event) => {
+                meio = event.target.id;
+                console.log(meio);
+            })
+            console.log(itemLink.innerHTML);
+        });
+
         const clicado = document.querySelectorAll(".subitem-link").forEach((elemento) => {
             elemento.addEventListener('click', () => {
                 const final = elemento.innerHTML.toLowerCase();
-                const arquivoNome = 'tela-trabalho-usuario-' + final + '.html';
+                let arquivoNome = 'tela-trabalho-' + meio + '-' + final + '.html';
                 const caminhoTelaTrabalho = fetch(arquivoNome);
                 caminhoTelaTrabalho.then(r => r.text()).then(body => {
                     const conteudo = document.querySelector('.tela-trabalho');
