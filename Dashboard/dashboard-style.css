@@ -275,7 +275,7 @@ th, td {
 
 th {
     background-color: var(--amarelo);
-    color: var(--branco);
+    color: var(--preto);
     margin-bottom: 5px;
     font-weight: bold;
 }
